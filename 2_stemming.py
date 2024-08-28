@@ -11,7 +11,14 @@ paragraph = """After listening to all of you, I feel that the number of Lakhpati
             So, you must help explain this to others. Will you do that?"""
 
 sentences = nltk.sent_tokenize(paragraph)#sentence tokenization
-words = nltk.word_tokenize(paragraph)#word tokenization
+
+from nltk.stem import PorterStemmer
+from nltk.corpus import stopwords
+
+stemmer = PorterStemmer()
+for i in range(len(sentences)):
+    words = nltk.word_tokenize(sentences[i])
+    words = [stemmer.stem(word) for word in words if word not in set(stopwords.words('english'))]
+    sentences[i] = ' '.join(words)
 
 print(sentences)
-print(words)
