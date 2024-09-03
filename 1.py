@@ -10,6 +10,8 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import ElasticNet
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 
+os.makedirs("artifacts", exist_ok=True)
+
 data = sns.load_dataset("iris")
 
 alpha = float(sys.argv[1]) if len(sys.argv) > 1 else 0.15
@@ -21,7 +23,7 @@ with mlflow.start_run():
     X = data.iloc[:, :-1]
     y = data.iloc[:, -1]
 
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=0)
 
     sc = StandardScaler()
     X_train = sc.fit_transform(X_train)
@@ -45,4 +47,3 @@ with mlflow.start_run():
     mlflow.log_metric("mae", mean_absolute_error(y_test, y_pred))
     mlflow.log_metric("r2", r2_score(y_test, y_pred))
 
-    mlflow.sklearn.log_model(elasticnet_model, "model")

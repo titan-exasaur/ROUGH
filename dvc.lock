@@ -1,0 +1,14 @@
+schema: '2.0'
+stages:
+  execution:
+    cmd: python 1.py
+    deps:
+    - path: 1.py
+      hash: md5
+      md5: 58f7fe8351d2ae37c964d83701a0b215
+      size: 1605
+    outs:
+    - path: artifacts/elasticnet_model.pkl
+      hash: md5
+      md5: d662d95ebc851e28081d55ecef96ef38
+      size: 663
