@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kumar/Documents/NEW%20JOB/UPSKILL/13%20ROUGHNOTE/mlruns/0/2ea8aa6d49054feba095345d64fbad32/artifacts
+end_time: 1725385284203
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2ea8aa6d49054feba095345d64fbad32
+run_name: crawling-carp-552
+run_uuid: 2ea8aa6d49054feba095345d64fbad32
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1725385284163
+status: 3
+tags: []
+user_id: kumar

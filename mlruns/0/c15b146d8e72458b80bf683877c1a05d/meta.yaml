@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kumar/Documents/NEW%20JOB/UPSKILL/13%20ROUGHNOTE/mlruns/0/c15b146d8e72458b80bf683877c1a05d/artifacts
+end_time: 1725384760601
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c15b146d8e72458b80bf683877c1a05d
+run_name: popular-cat-607
+run_uuid: c15b146d8e72458b80bf683877c1a05d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1725384760508
+status: 3
+tags: []
+user_id: kumar
